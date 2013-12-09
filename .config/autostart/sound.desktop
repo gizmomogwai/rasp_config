@@ -1,4 +1,4 @@
 [Desktop Entry] 
 Type=Application
-Exec=/home/pi/start_chromium.sh
+Exec=/home/pi/start_sound.sh
 
