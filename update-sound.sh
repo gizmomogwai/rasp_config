@@ -1,4 +1,11 @@
 #!/bin/bash
+source ~/.rvm/scripts/rvm
+set -x
 cd sound
 git fetch origin
-git rebase origin/master
+if [ $(git rev-parse HEAD) != $(git rev-parse @{u}) ]
+then
+  git rebase origin/master
+  killall ruby
+  nohup rake &
+fi
